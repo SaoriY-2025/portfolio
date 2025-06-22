@@ -139,24 +139,23 @@ section {
 
 #works {
     position: relative;
-    height: 950px;
-    width: 80%;
     margin: 0 auto;
+    padding-bottom: 150px;
 }
 
 #works::after {
     position: absolute;
-    width: 720px;
-    height: 310px;
+    width: 500px;
+    height: 220px;
     background-image: url(./image/works.png);
     background-size: contain;
     background-repeat: no-repeat;
     content: "";
-    bottom: -145px;
+    bottom: 0px;
     right: 0;
 }
 
-#works .explanation {
+#top #works .explanation {
     font-size: 17px;
     line-height: 20px;
 }
@@ -171,7 +170,7 @@ section {
     font-size: 17px;
 }
 
-#works p:nth-child(4) {
+#top #works p:nth-child(4) {
     line-height: 20px;
     margin-bottom: 10px;
 }
@@ -247,13 +246,13 @@ section {
 
 #profile::after {
     position: absolute;
-    width: 720px;
-    height: 310px;
+    width: 500px;
+    height: 220px;
     background-image: url(./image/profile.png);
     background-size: contain;
     background-repeat: no-repeat;
     content: "";
-    bottom: -83px;
+    bottom: -60px;
     right: 0px;
 }
 
@@ -442,7 +441,7 @@ h3 {
 
 #skill {
     position: relative;
-    height: 850px;
+    padding-bottom: 150px;
 }
 
 #skill h2 {
@@ -468,13 +467,13 @@ h3 {
 
 #skill::after {
     position: absolute;
-    width: 450px;
-    height: 310px;
+    width: 370px;
+    height: 250px;
     background-image: url(./image/skill.png);
     background-size: contain;
     background-repeat: no-repeat;
     content: "";
-    bottom: -200px;
+    bottom: -50px;
     right: 0px;
 }
 
@@ -707,8 +706,8 @@ footer {
 
 #detail h5 {
     width: 200px;
-    padding: 0 5px 5px;
-    margin-bottom: 15px;
+    padding: 0 5px;
+    margin-bottom: 5px;
     border-bottom: 1px solid #5079A5;
 }
 
@@ -718,6 +717,11 @@ footer {
     border: 1.5px solid #3F3638;
     padding: 20px;
     margin: 0 auto 20px;
+}
+
+.detail_box1 p,
+.detail_box2 p {
+    line-height: 20px;
 }
 
 .detail_box2 {
@@ -737,7 +741,7 @@ footer {
 }
 
 #works_portfolio #works .detail_box2 p {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 /* ------------------------------------------------------------portfolio_detail */
@@ -762,7 +766,7 @@ footer {
     padding: 2px 10px;
 }
 
-#about_img{
+#about_img {
     background-image: url();
     position: absolute;
     top: 0;
@@ -789,7 +793,7 @@ footer {
     margin: 30px auto;
 }
 
-#about .hidden{
+#about .hidden {
     display: none;
 }
 
@@ -809,7 +813,7 @@ footer {
     transition: width 0.4s ease;
 }
 
-#about .detail_box a:hover{
+#about .detail_box a:hover {
     transform: none;
 }
 
