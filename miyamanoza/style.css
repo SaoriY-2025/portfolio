@@ -1,0 +1,770 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+* {
+    margin: 0
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word
+}
+
+#root,
+#__next {
+    isolation: isolate
+}
+
+/* ---------------------------------ここから自作 */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #5d5e5e;
+    color: #efefef;
+    font-family: "Shippori Mincho", "Noto Serif JP", serif;
+}
+
+a {
+    text-decoration: none;
+    color: #efefef;
+    font-size: 1.5em;
+}
+
+li {
+    list-style-type: none;
+}
+
+.sp {
+    display: none;
+}
+
+header nav {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 0px;
+    right: 0px;
+    z-index: 999;
+}
+
+header ul {
+    margin: 20px;
+}
+
+header #main-visual {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header h1 img {
+    width: 150px;
+    height: 150px;
+}
+
+#main-visual .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 0;
+}
+
+#main-visual .bg-image.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+header img {
+    position: relative;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 0 auto;
+    display: block;
+    z-index: 999;
+}
+
+.inner {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#hello {
+    position: relative;
+    margin-top: 100vh;
+    height: 100vh;
+}
+
+#logo {
+    background-image: url(./img/ロゴ3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    top: 180px;
+    left: -200px;
+}
+
+#hello h2 {
+    margin: 150px 0 150px;
+    padding: 20px;
+}
+
+#hello p {
+    margin-top: 20px;
+    margin-left: 55%;
+}
+
+.slide-in-bottom {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 2s ease, opacity 1.5s ease;
+}
+
+.slide-in-bottom.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#room_top {
+    position: relative;
+    background-image: linear-gradient(rgba(76, 76, 76, 0.3), rgba(76, 76, 76, 0.8)), url(./img/温泉8.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+#room h2 {
+    padding: 120px;
+}
+
+#room h2 span {
+    font-size: 0.8em;
+}
+
+#room_top p {
+    margin-top: 20px;
+    margin-left: 55%;
+}
+
+#room p:last-child {
+    padding-bottom: 60px;
+}
+
+.slide-in-left {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.slide-in-right {
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+.slide-in-left.active,
+.slide-in-right.active {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: transform 2s ease, opacity 1.5s ease;
+}
+
+#room li {
+    position: relative;
+    height: 330px;
+}
+
+#room li h3,
+li p {
+    text-align: center;
+}
+
+#room .inner a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#room ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+#room li h3 {
+    font-size: 0.8em;
+    margin: 0 auto;
+}
+
+#room li p {
+    font-size: 0.6em;
+}
+
+#room1 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#room1 a>div {
+    text-align: center;
+}
+
+#room1 {
+    background-image: linear-gradient(rgba(76, 76, 76, 0.5), rgba(76, 76, 76, 0.7)), url(./img/客室４.jpg);
+}
+
+#room2 {
+    background-image: linear-gradient(rgba(76, 76, 76, 0.5), rgba(76, 76, 76, 0.7)), url(./img/客室２.jpg);
+}
+
+#room3 {
+    background-image: linear-gradient(rgba(76, 76, 76, 0.5), rgba(76, 76, 76, 0.7)), url(./img/客室３.jpg);
+}
+
+#room4 {
+    background-image: linear-gradient(rgba(76, 76, 76, 0.5), rgba(76, 76, 76, 0.7)), url(./img/客室６.jpg);
+}
+
+#room5 {
+    background-image: linear-gradient(rgba(76, 76, 76, 0.5), rgba(76, 76, 76, 0.7)), url(./img/客室５.jpg);
+}
+
+#room6 {
+    background-image: linear-gradient(rgba(76, 76, 76, 0.5), rgba(76, 76, 76, 0.7)), url(./img/客室８.jpg);
+}
+
+.hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 330px;
+    width: 320px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.9s ease;
+}
+
+.hover:hover {
+    transform: scale(1.1);
+}
+
+.hover a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.hover a>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#onsen {
+    background-image: linear-gradient(rgba(76, 76, 76, 0.5), rgba(76, 76, 76, 0.7)), url(./img/温泉１.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center top;
+    height: 1100px;
+}
+
+#onsen h2 {
+    padding: 120px 115px 20px;
+}
+
+#onsen .box {
+    width: 650px;
+    height: 220px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 {
+    transition-delay: 0.5s;
+}
+
+.delay-2 {
+    transition-delay: 1.5s;
+}
+
+.delay-3 {
+    transition-delay: 1.8s;
+}
+
+#senshitsu1 {
+    background-image: url(./img/温泉７.jpg);
+    background-size: cover;
+    background-position: center top;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 10px 0 0 20px;
+}
+
+#senshitsu2 {
+    background-image: url(./img/温泉５.jpg);
+    background-size: cover;
+    background-position: center top;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 10px 0 0 20px;
+}
+
+#senshitsu3 {
+    background-image: url(./img/温泉６.jpg);
+    background-size: cover;
+    background-position: center top;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 10px 0 0 20px;
+}
+
+#onsen .text {
+    margin-top: 15px;
+    margin-left: auto;
+    width: 60%;
+    justify-content: center;
+}
+
+#onsen h3 {
+    padding-bottom: 1em;
+}
+
+#onsen h3 span {
+    font-size: 0.8em;
+}
+
+#onsen p {
+    font-size: 0.9em;
+}
+
+#news {
+    margin-top: 100px;
+    width: 1000px;
+    height: 600px;
+    border: 1px solid #fff;
+}
+
+#news .slide-in-left {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+#news .slide-in-left.active {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: transform 2s ease, opacity 1.5s ease;
+}
+
+#news h2 {
+    margin: 62px 0 0 70px;
+}
+
+#news ul {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+#news li {
+    padding: 10px 60px;
+}
+
+#news li {
+    border-right: 1px solid #fff;
+}
+
+#news li:last-child {
+    border-right: none;
+}
+
+#news li:last-child {
+    margin-right: 0px;
+}
+
+#news .text {
+    width: 200px;
+    margin: 0 auto;
+}
+
+#news img {
+    display: block;
+    margin: 10px auto 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#news time {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#news h3 {
+    margin-bottom: 30px;
+}
+
+#news a {
+    font-size: 0.9em;
+    margin-left: 60%;
+}
+
+#reservation {
+    width: 1000px;
+    height: 330px;
+    padding: 120px 0;
+}
+
+#reservation img {
+    margin: 0 auto;
+}
+
+footer {
+    height: 500px;
+    padding-top: 130px;
+    background-image: url(./img/ロゴ3透過.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+footer h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+footer .copyright {
+    text-align: center;
+    font-size: 0.8em;
+    padding: 8px 0;
+    margin-top: 185px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* -------------------スマホ */
+
+@media screen and (max-width: 960px) {
+
+    .sp {
+        display: block;
+    }
+
+    #nav-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        height: 32px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    #nav-toggle>div {
+        position: relative;
+        width: 36px;
+    }
+
+    #nav-toggle>div span {
+        width: 100%;
+        height: 2px;
+        left: 0;
+        display: block;
+        background: #fff;
+        position: absolute;
+        transition: transform .3s ease, top .5s ease;
+    }
+
+    #nav-toggle>div span:nth-child(1) {
+        top: 0;
+    }
+
+    #nav-toggle>div span:nth-child(2) {
+        top: 14px;
+    }
+
+    #nav-toggle>div span:nth-child(3) {
+        top: 28px;
+    }
+
+    .open #nav-toggle>div span:nth-child(1) {
+        top: 15px;
+        transform: rotate(45deg);
+    }
+
+    .open #nav-toggle>div span:nth-child(2) {
+        width: 0;
+    }
+
+    .open #nav-toggle>div span:nth-child(3) {
+        top: 15px;
+        transform: rotate(-45deg);
+    }
+
+    header nav {
+        transform: translateX(190px);
+        transition: transform 1s ease;
+    }
+
+    header.open nav {
+        transform: translateX(0) !important;
+    }
+
+    header.open nav li {
+        transform: translateX(0);
+    }
+
+    header nav ul>li:nth-child(2) {
+        transition-delay: .15s;
+    }
+
+    header nav ul>li:nth-child(3) {
+        transition-delay: .3s;
+    }
+
+    header nav ul>li:nth-child(4) {
+        transition-delay: .6s;
+    }
+
+    header #main-visual {
+        height: 50%;
+    }
+
+    header img {
+        position: fixed;
+        width: 100px;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: block;
+        z-index: 999;
+        top: 0px;
+        left: 0px;
+    }
+
+    header ul {
+        margin: 45px 50px 20px 0px;
+    }
+
+    .inner {
+        width: 85%;
+    }
+
+    #hello {
+        margin-top: 1000px;
+        height: 500px;
+    }
+
+    #hello h2 {
+        margin: 80px 0 60px;
+    }
+
+    #hello h2,
+    #hello p {
+        text-align: center;
+    }
+
+    #hello p {
+        margin-left: 0;
+    }
+
+    #logo {
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: -40px;
+    }
+
+    #room_top {
+        height: 600px;
+    }
+
+    #room_top h2 {
+        padding: 45px 0px;
+    }
+
+    #room_top h2,
+    #room_top p {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    #room ul {
+        display: block;
+        height: 1200px;
+        padding-left: 0;
+    }
+
+    #room li {
+        height: 200px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .hover {
+        width: 80%;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .hover a>div {
+        height: 125%;
+    }
+
+    #onsen {
+        height: 820px;
+        border-radius: 0%;
+    }
+
+    #onsen h2 {
+        text-align: center;
+        padding: 50px 0 50px;
+    }
+
+    #senshitsu1,
+    #senshitsu2,
+    #senshitsu3 {
+        display: none;
+        margin-left: none;
+        justify-content: left;
+    }
+
+    #onsen .text {
+        width: 95%;
+        margin-left: 0;
+    }
+
+    #onsen .box {
+        width: 60%;
+        height: auto;
+        text-align: center;
+    }
+
+    #onsen h3 {
+        font-size: 0.95em;
+    }
+
+    #onsen h3 span {
+        font-size: 0.85em;
+    }
+
+    #onsen p {
+        font-size: 0.75em;
+        margin-bottom: 20px;
+    }
+
+    #news {
+        background-image: linear-gradient(rgba(76, 76, 76, 0.6), rgba(76, 76, 76, 0.8)), url(./img/料理１.jpg );
+        background-position: center top;
+        background-size: contain;
+        width: 85%;
+        margin: 0 auto;
+        padding-top: 10px;
+        margin-top: 70px;
+    }
+
+    #news h2 {
+        margin: 30px 0 30px 30px;
+        text-align: center;
+    }
+
+    #news ul {
+        display: block;
+        padding-left: 0;
+    }
+
+    #news li {
+        padding: 10px 0px;
+        border-right: none;
+    }
+
+    #news .text {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #fff;
+    }
+
+    #news img {
+        display: none
+    }
+
+    #news br {
+        display: none;
+    }
+
+    #news a {
+        margin-left: 70%;
+        padding-bottom: 10px;
+    }
+
+    #reservation {
+        width: 100%;
+    }
+
+    #reservation img {
+        width: 90%;
+    }
+
+    footer .inner {
+        margin-left: 70px;
+    }
+}
