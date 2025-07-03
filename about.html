@@ -12,11 +12,6 @@
 
 <body id="about">
     <header id="kasou">
-        <button class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
         <nav class="nav-menu">
             <ul>
                 <li><a href="index.html">top</a></li>
@@ -28,34 +23,116 @@
         </nav>
     </header>
 
-    <section id="works">
-        <div class="inner detail_box">
-            <h4><span>A</span>bout<span class="blue_mini"> － わたしのこと</span></h4>
+    <section>
+        <div id="about_img1"></div>
+        <div class="detail_box">
+            <h3><span>A</span>bout<span class="blue_mini"> － わたしのこと</span></h3>
             <p>幼いころからイラストや動画編集に興味があったこと、前職で様々なシステムやサイト運用に携わった経験からWebデザインの道を志し、2025年2月にwinスクールに入学。<br>
                 WEB・映像スペシャリストコースにて、illustratorやPhotoshop、After EffectsやPremia Pro、HTML/CSS、Javascript/JQeryを学ぶ。<br>
-                中でも最も興味を持ったコーディングを本腰を入れて学ぶと決意し退職。現在はwebエンジニア・コーダーとしての就職、ITパスポート・基本情報技術者取得を目指し勉強中。<br>
-                特技はタイピング、明治19年式戸籍の解読。<br>
-                趣味は<a class="hidden">ゲーム、推し活、ひとり旅、ピラティス。</a></p>
+                中でも最も興味を持ったコーディングを本腰を入れて学ぶと決意し退職。<br>
+                現在はwebエンジニア・コーダーとしての就職、ITパスポート・基本情報技術者取得を目指し勉強中。</p>
+                <p>【特技】<br>タイピング、明治19年式戸籍の解読<br>
+                【趣味】<a href="#" id="show-hidden">ゲーム、推し活、ひとり旅、ピラティス</a></p>
+            <div id="modal" class="hidden-content">
+                <div class="modal-box">
+                    <button id="close-modal">×</button>
+                    <div>
+                        <h5><span class="blue_mini">●</span> ゲーム</h5>
+                        <p>グノーシア、DQB2、龍が如くシリーズ、テイルズオブシリーズが好き。<br>
+                            765至上主義ですが、最近は学園アイドルマスターにハマっています。</p>
+                    </div>
+                    <div>
+                        <h5><span class="blue_mini">●</span> 推し活</h5>
+                        <p>
+                            早見沙織さん（声優・歌手）、INI（男性アイドル）、=LOVE（女性アイドル）が好き。<br>
+                            早見沙織さんは10年以上推し！<br>
+                            推しになるきっかけは、曲（特に歌詞）と顔。
+                        </p>
+                    </div>
+                    <div>
+                        <h5><span class="blue_mini">●</span> ひとり旅</h5>
+                        <p>
+                            推し活のついでに、これまで仙台・東京・大阪・京都・広島に行きました。<br>
+                            西鉄バスより飛行機の方が慣れています。
+                        </p>
+                    </div>
+                    <div>
+                        <h5><span class="blue_mini">●</span> ピラティス</h5>
+                        <p>
+                            2024年12月から始めました。<br>
+                            食べても太らなくなったことが嬉しくて続けています♪
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
     <section id="career">
-        <h4><span>C</span>areer<span class="blue_mini"> － 経歴</span></h4>
-        <div class="inner">
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        </div>
-        <p class="right_kasou"><a href="index.html#works">一覧に戻る</a></p>
+            <div class="inner">
+                <h3><span>C</span>areer<span class="blue_mini"> － 経歴</span></h3>
+                <div class="career-line">
+                    <ul>
+                        <li>
+                            <h6>2018.4 － 2019.3
+                            </h6>
+                            <p>専門学校卒業後、社会医療法人財団燿光リハビリテーション病院へ就職。<br>
+                                言語聴覚士として従事する。</p>
+                        </li>
+                        <li>
+                            <h6>2019.4 － 2021.2</h6>
+                            <p>社会医療法人財団燿光リハビリテーション病院退職後、<br class="none">
+                                WEBライター、飲食店でのキッチン業務、ドラッグストアでの接客業務を経験。</p>
+                        </li>
+                        <li>
+                            <h6>2021.3 － 2025.3</h6>
+                            <p>司法書士法人みつ葉グループへ入社。<br>
+                                不動産営業事務を2年、戸籍調査事務を1年、法人営業事務を1年、相続事務（ヘルプ）を半年経験。</p>
+                        </li>
+                        <li>
+                            <h6>2025.3 － 現在</h6>
+                            <p>司法書士法人みつ葉グループを退社。<br>
+                                winスクールにて学びながら、就職活動を行う。</p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="about_img2"></div>
+            </div>
     </section>
+
+    <div class="go-top">
+        <p><a href="index.html">TOPに戻る</a></p>
+    </div>
 
     <footer>
         &copy;2025 Saori Yoshimura
     </footer>
 
-    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const showBtn = document.getElementById('show-hidden');
+            const modal = document.getElementById('modal');
+            const closeBtn = document.getElementById('close-modal');
+
+            showBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                modal.classList.add('show');
+                console.log('modal opened');
+            });
+
+            closeBtn.addEventListener('click', function () {
+                console.log('close clicked');
+                modal.classList.remove('show');
+            });
+
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    console.log('background clicked');
+                    modal.classList.remove('show');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

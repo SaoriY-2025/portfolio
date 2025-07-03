@@ -162,6 +162,7 @@ section {
 
 #works p:nth-child(3) {
     margin-bottom: 10px;
+    font-size: 16px;
 }
 
 #works p:first-child,
@@ -719,11 +720,6 @@ footer {
     margin: 0 auto 20px;
 }
 
-.detail_box1 p,
-.detail_box2 p {
-    line-height: 20px;
-}
-
 .detail_box2 {
     margin: 0 auto 60px;
 }
@@ -766,19 +762,45 @@ footer {
     padding: 2px 10px;
 }
 
-#about_img {
-    background-image: url();
-    position: absolute;
+#about_img1 {
+    background-image: url(./image/IMG_1511.png);
     top: 0;
     right: 0;
 }
 
+#about_img2 {
+    background-image: url(./image/IMG_8613_Original.png);
+    bottom: 0;
+    left: 0;
+}
+
+#about_img1,
+#about_img2 {
+    background-size: cover;
+    width: 470px;
+    height: 625px;
+    position: absolute;
+    z-index: -100;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
 #about .detail_box {
-    width: 35%;
+    width: 50%;
     border: 1.5px solid #5079A5;
     padding: 20px;
-    margin: 0 auto 20px;
+    margin: 0 auto 100px;
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+#about .detail_box h3 {
+    margin: 33px 0 17px 33px;
 }
 
 #about .blue_mini {
@@ -788,13 +810,9 @@ footer {
 
 #about .detail_box p {
     color: #3F3638;
-    font-size: 17px;
+    font-size: 18px;
     width: 90%;
     margin: 30px auto;
-}
-
-#about .hidden {
-    display: none;
 }
 
 #about .detail_box a {
@@ -821,6 +839,111 @@ footer {
     width: 100%;
 }
 
+.hidden-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+    z-index: 1100;
+}
+
+.hidden-content.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+#about .detail_box .modal-box p {
+    margin: 0px 0px 30px 27px;
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#career {
+    width: 53%;
+    background-color: rgba(240, 249, 252, 0.8);
+    margin: 0 auto 100px;
+    padding: 50px 0 100px;
+}
+
+#career .career-line {
+    position: relative;
+}
+
+#career ul {
+    margin-left: 70px;
+}
+
+#career ul::after {
+    position: absolute;
+    width: 15px;
+    height: 700px;
+    content: "";
+    top: -10px;
+    left: 10px;
+    background: linear-gradient(180deg, rgba(197, 230, 243, 1), rgba(197, 230, 243, 0));
+}
+
+#career h3 {
+    margin-bottom: 30px;
+}
+
+#career h6 {
+    font-size: 20px;
+    margin-top: 35px;
+}
+
+#career p {
+    font-size: 17px;
+}
+
+.go-top {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.go-top a {
+    font-size: 25px;
+    padding: 0 10px 5px 15px;
+    border-bottom: 1px solid #5079A5;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.go-top a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #5079A5;
+    transition: width 0.4s ease;
+}
+
 
 
 /* ------------------------------------------------------------スマホ */
@@ -840,7 +963,7 @@ footer {
         padding: 0px 0 0 10px;
     }
 
-    header nav {
+    .top header nav {
         opacity: 0;
     }
 
@@ -855,13 +978,12 @@ footer {
     }
 
     .hamburger {
-        display: flex;
+        display: flex !important;
         position: fixed;
         flex-direction: column;
         gap: 5px;
-        width: 30px;
-        height: 15px;
-        margin: 10px;
+        width: 35px;
+        margin: 15px;
         background: transparent;
         border: none;
         cursor: pointer;
@@ -869,14 +991,15 @@ footer {
     }
 
     .hamburger span {
-        height: 1px;
+        width: 100%;
+        height: 2px;
         background: #333;
-        border-radius: 2px;
         transition: all 0.3s ease;
+        display: block;
     }
 
     .hamburger.active span:nth-child(1) {
-        transform: translateY(4px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg);
     }
 
     .hamburger.active span:nth-child(2) {
@@ -900,7 +1023,7 @@ footer {
     #works::after {
         width: 290px;
         height: 130px;
-        bottom: -50px;
+        bottom: 0px;
     }
 
     #profile::after {
@@ -936,10 +1059,6 @@ footer {
         padding-top: 100px;
     }
 
-    #works {
-        height: 1000px;
-    }
-
     #works .flex {
         display: block;
         margin: 0 auto 30px;
@@ -956,7 +1075,8 @@ footer {
 
     #works p:first-child,
     #works p:nth-child(4) {
-        font-size: 12px;
+        font-size: 16px;
+        line-height: 25px;
     }
 
     #works a {
@@ -1073,6 +1193,7 @@ footer {
 
     #prospects li {
         font-size: 16px;
+        width: 85%;
     }
 
     #prospects::after {
@@ -1092,10 +1213,6 @@ footer {
 
     #skill .flex {
         display: block;
-    }
-
-    #skill {
-        height: 1200px;
     }
 
     #skill h2 {
@@ -1218,5 +1335,53 @@ footer {
         font-size: 17px;
     }
 
+    #about .inner {
+        width: 95%;
+    }
 
+    #about .detail_box,
+    #career {
+        width: 85%;
+    }
+
+    #about .detail_box h3,
+    #career h3 {
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    #about .detail_box p {
+        font-size: 16px;
+    }
+
+    #about .modal-box {
+        width: 70%;
+    }
+
+    #about .none {
+        display: none;
+    }
+
+    #about_img1 {
+        width: 100%;
+        height: 850px;
+    }
+
+    #about_img2 {
+        display: none;
+    }
+
+    #career {
+        background-color: transparent;
+    }
+
+    #career ul {
+        margin-left: 0px;
+        padding: 1px 20px;
+        background: linear-gradient(180deg, rgba(197, 230, 243, 1), rgba(197, 230, 243, 0));
+    }
+
+    #career ul::after {
+        display: none;
+    }
 }

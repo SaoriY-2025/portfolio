@@ -36,11 +36,11 @@ if (document.body.classList.contains('top')) {
   });
 
   animate();
-} else {
-  // 下層ページでは位置を固定し、transformを初期化
-  nav.style.transform = 'none';
-  nav.style.position = 'fixed';
-  nav.style.top = '0';
+// } else {
+//   // 下層ページでは位置を固定し、transformを初期化
+//   nav.style.transform = 'none';
+//   nav.style.position = 'fixed';
+//   nav.style.top = '0';
 }
 
 
